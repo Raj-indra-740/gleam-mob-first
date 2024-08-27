@@ -39,7 +39,7 @@
     --description-font-color: #0071b4;
     --heading-font-size: 2rem;
     --description-font-size: 1rem;
-    --padding-of-sections-tb: 40px;
+    --padding-of-sections-tb: 0;
     --padding-of-sections-lr: 1rem;
 
     --section-heading-width: 343px;
@@ -118,7 +118,7 @@ ul{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: calc(var(--padding-of-sections-tb) + 4rem) var(--padding-of-sections-lr) 0;
+    padding: calc(40px + 4rem) var(--padding-of-sections-lr) 0;
 }
 
 .hero-section-heading{
@@ -215,6 +215,7 @@ ul{
 /* working step section config */
 .working-step-section{
     width: 100%;
+    background-color: #F0F7FB;
     --h2-line-heigth: 42px;
     --h2-margin-bottom: 8px;
     --p-line-heigth: 18px;
@@ -224,7 +225,8 @@ ul{
     --step-card-gap: 32px;
 }
 .working-step{
-    margin: auto
+    margin: auto;
+    padding: var(--padding-of-sections-tb) var(--padding-of-sections-lr);
 }
 .working-step-heading{
     text-align: center;
@@ -237,6 +239,7 @@ ul{
     line-height: var(--h2-line-heigth);  
 }
 .working-step-heading p{
+    margin: auto;
     margin-bottom: var(--p-margin-bottom);
     color: var(--heading-font-color);
     font-size: var(--description-font-size);
@@ -251,14 +254,15 @@ ul{
     align-items: center ;
     gap: var(--step-card-gap);
 }
-.working-step-cards img[alt="arrows"]{
+.working-step-cards img[alt="arrows"], .working-step-heading img[alt="crossLine"]{
     display: none;
 }
 .step-card{
     display: flex;
     flex-direction:column ;
+    align-items: center;
     width: 100%;
-    max-width: 329px;
+    max-width: 343px;
     text-align: center;
 }   
 .step-card img[alt="stepImg"]{
@@ -281,6 +285,9 @@ ul{
 
 
 @media screen and (min-width: 768px) {
+    :root{
+        --padding-of-sections-tb: 40px;
+    }
     .hero-section-container{
         flex-direction: row;
     }
@@ -306,9 +313,9 @@ ul{
         flex-direction: row-reverse;
         gap: 10px;
     } */
-    .step-card{
+    /* .step-card{
         width: 30%;
-    }
+    } */
 
 }
 
@@ -389,26 +396,87 @@ ul{
     }
 
 
+    .crossline{
+        height: 100px;
+    }
+
     /* working step section config */
     .working-step-section{
         --h2-line-heigth: 56px;
         --h2-margin-bottom: 16px;
         --p-line-heigth: 20px;
-        --p-margin-bottom: 68px;
+        --p-margin-bottom: 8px;
         --step-card-gap: 100px;
+        --working-step-line-width:285px;
+    }
+    .working-step-heading{
+        position: relative;
+    }
+    .working-step-heading img[alt="crossLine"]{
+        display: inline-block;
+        position: absolute;
+        bottom: 70%;
+        right: 71%;
+        width: 15vw;
     }
 
-    .step-card{
+    /* .step-card{
         width: 20%;
-    }
+        max-width: 343px;
+    } */
     .row-two{
         flex-direction: row-reverse;
     }
+    .step-card{
+        position: relative;
+        z-index: 4;
+    }
+    .step-1, .step-6{
+        margin-top: 149px;
+    }
+    .step-3, .step-4{
+        margin-top: 106px;
+    }
+    .working-step-cards img[alt="arrows"]{
+        display: inline-block;
+        position: absolute;
+        width: var(--working-step-line-width);
+    }
+    .step-1 img[alt="arrows"] {
+        left: 55%;
+        top: 0;
+        z-index: -1;
+    }
+    .step-2 img[alt="arrows"] {
+        left: 60%;
+        top: 8%;
+        z-index: -1;
+    }
+      
+      .step-3 img[alt="arrows"] {
+        width: 129px;
+        height: 469px;
+        left: 70%;
+        top: 95px;
+        z-index: -1;
+      }
+      
+      .step-4 img[alt="arrows"] {
+        right: 70%;
+        bottom: 70%;
+        z-index: -1;
+      }
+      
+      .step-5 img[alt="arrows"] {
+        right: 69%;
+        top: 50px;
+        z-index: -1;
+      }
 }
 
 @media(min-width: 1440px)  {
     :root {
-        --description-font-size: 1.5rem;
+        --description-font-size: 1.25rem;
         --heading-font-size: 3.5rem;
         --section-subheading-font-size: 1.5rem; 
         --padding-of-sections-tb: 80px;
@@ -475,7 +543,7 @@ ul{
     .hero-section{
         display: flex;
     }
-    .hero-section-heading >  h1 , p{
+    .hero-section-heading >  h1 , .hero-section-heading > p{
         width: 80%;
     }
     .glow-effect-1{
@@ -483,6 +551,24 @@ ul{
         height: 420px;
         top: 10%;
         filter: blur(177.59px);
+    }
+
+
+    /* working step section config */
+    .working-step-section{
+        --h2-line-heigth: 83px;
+        --h2-margin-bottom: 16px;
+        --p-line-heigth: 25px;
+        --p-margin-bottom: 8px;
+        --step-card-gap: 127px;
+        --working-step-line-width:285px;
+    }
+    .working-step-heading img[alt="crossLine"]{
+        width: 240px;
+        right: 81%;
+    }
+    .step-3 img[alt="arrows"] {
+        left: 77%;
     }
 }
 
