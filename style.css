@@ -1335,9 +1335,9 @@ ul {
 
   .hero-section-heading {
     --h1-font-size: 65px;
-    --p-font-size: 1.53rem;
-    --h1-line-heigth: 5rem;
-    --p-line-heigth: 2rem;
+    --p-font-size: 24px;
+    --h1-line-heigth: 80px;
+    --p-line-heigth: 33px;
   }
 
   .hero-section {
@@ -1445,8 +1445,16 @@ ul {
     background: #62C5FF;
     opacity: 0.5;
     filter: blur(177.59px);
-
-
-
   }
+
+  .rating-stars{
+    display: flex;
+    gap: 5px;
+  }
+  .star{
+    width: 32px;
+    height: 32px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color:#FFE815;
+    }
 }
