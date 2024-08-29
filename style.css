@@ -187,8 +187,8 @@ ul {
   height: 35px;
 }
 .logo-size{
-  width: 165px;
-  height: 73px;
+  width: 76px;
+  height: 34px;
 }
 /* Nav bar section */
 .nav-section {
@@ -592,13 +592,14 @@ ul {
 .blog-cards .card {
   width: 394px;
 }
-.blog-cards .blog-date {
+.blog-date {
   display: flex;
   align-items: center;
   gap: 8px;
   color: #9f9f9f;
   font-size: 16px;
   font-weight: 450;
+  padding-top: 12px;
 }
 .dot {
   display: inline-block;
@@ -608,6 +609,7 @@ ul {
   border-radius: 50%;
 }
 .more-blog-btn {
+  /* font-size: 18px; */
   width: fit-content;
   margin: 32px auto 0;
 }
@@ -885,7 +887,10 @@ ul {
 
     --card-h3-width: 80%;
   }
-
+  .logo-size{
+    width: 125px;
+    height: 53px;
+  }
   /* Hero section */
   .hero-section-container {
     flex-direction: row;
@@ -971,6 +976,10 @@ ul {
     font-size: 16px;
     font-weight: 450; 
     line-height: 20.24px;
+  }
+  .logo-size{
+    width: 165px;
+    height: 73px;
   }
   /* Nav section */
   .nav-section {
@@ -1204,8 +1213,9 @@ ul {
   }
 
   .rating-cards p {
+    color: #373A36;
     max-width: 353px;
-    font-weight: 450px;
+    font-weight: 450;
     line-height: 30px;
     font-size: 20px;
   }
@@ -1518,6 +1528,10 @@ ul {
     max-width: 353px;
   }
 
+
+  .blog-date{
+    padding-top: 8px;
+  }
   .upper-footer {
     --upper-footer-h3-size: 48px;
     --upper-footer-h4-size: 36px;
