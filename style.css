@@ -73,7 +73,7 @@
   --card-inbtw-gap: 24px;
   --blog-card-inbtw-gap: 24px;
 
-  --btn-padding-tb: 15px;
+  --btn-padding-tb: 10px;
   --btn-padding-lr: 20px;
 }
 
@@ -107,6 +107,9 @@ ul {
   border: none;
   border-radius: 7px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
 }
 .btn:hover,
 .btn:active {
@@ -134,9 +137,9 @@ ul {
 .card h3 {
   max-width: var(--card-h3-width);
   color: var(--description-font-color);
-  font-size: var(--card-h3-size);
+  /* font-size: var(--card-h3-size);
   line-height: var(--card-h3-line-height);
-  font-weight: var(--card-h3-font-weight);
+  font-weight: var(--card-h3-font-weight); */
   margin-bottom: 12px;
 }
 .card p {
@@ -158,7 +161,35 @@ ul {
     font-size: 18px;
 }
 
-
+.card-heading-font-size{
+  font-size: 24px;
+  font-weight: 450;
+  line-height: 30.36px;
+}
+.icon-24{
+  width: 24px;
+  height: 24px;
+}
+.icon-21{
+  width: 21px;
+  height: 21px;
+}
+.icon-12{
+  width: 12px;
+  height: 12px;
+}
+.icon-18{
+  width: 18px;
+  height: 18px;
+}
+.payment-icon-size{
+  width: 56px;
+  height: 35px;
+}
+.logo-size{
+  width: 165px;
+  height: 73px;
+}
 /* Nav bar section */
 .nav-section {
   width: 100%;
@@ -239,6 +270,7 @@ ul {
   font-size: var(--h1-font-size);
   font-weight: 400;
   line-height: var(--h1-line-heigth);
+  z-index: 2;
 }
 
 .hero-section .highlight-text {
@@ -258,22 +290,25 @@ ul {
     font-weight: 400;
     font-size: var(--p-font-size);
     line-height: var(--p-line-heigth);
+   
 }
 .hero-section-heading {
   position: relative;
 }
 
-.glow-effect-1 {
+.glow-effect-2{
   position: absolute;
-  width: 226px;
-  height: 226px;
-  left: -133px;
-  top: 30%;
-  background: #62c5ff;
+  width: 420px;
+  height: 420px;
+  right: 73%;
+  bottom: 10%;
+  border: 1px solid black;
+  /* Ellipse 39 */
+  background: #62C5FF;
   opacity: 0.5;
-  filter: blur(84.5666px);
+  filter: blur(177.59px);
+  z-index: 1;
 }
-
 .hero-section-banner {
   width: 343px;
 }
@@ -410,9 +445,9 @@ ul {
 
 .step-card h3 {
   color: var(--step-card-heading-color);
-  font-size: 24px;
+  /* font-size: 24px; */
   padding-bottom: 8px;
-  font-weight: 500;
+  font-weight: 6  00;
 }
 
 .step-card p {
@@ -456,10 +491,11 @@ ul {
 }
 
 .category-cards h3 {
-  width: 109px;
+  max-width: 109px;
   text-align: center;
   font-size: var(--categories-card-h3-size);
   font-weight: 700;
+  line-height: 21px;
 }
 
 .category-1 {
@@ -738,7 +774,7 @@ ul {
 .input-section {
   width: 100%;
   display: flex;
-  gap: var(--lower-footer-flex-gap);
+  gap: 5px;
 }
 .input-section input {
   all: initial;
@@ -790,7 +826,7 @@ ul {
   width: 100%;
   margin-top: 20px;
   display: flex;
-  gap: var(--lower-footer-flex-gap);
+  gap: 5px;
 }
 .contact-us {
   width: 100%;
@@ -931,7 +967,11 @@ ul {
     width: 100%;
     max-width: 1440px;
   }
-
+  .description-font-size{
+    font-size: 16px;
+    font-weight: 450; 
+    line-height: 20.24px;
+  }
   /* Nav section */
   .nav-section {
     position: static;
@@ -960,8 +1000,10 @@ ul {
   .nav-section .nav-links {
     display: block;
   }
-
-  .nav-section .nav-links li:hover {
+  .nav-section .nav-links a{
+    font-weight: 450;
+  }
+  .nav-section .nav-links a:hover {
     font-weight: 600;
   }
 
@@ -1086,7 +1128,7 @@ ul {
 
   .step-2 img[alt="arrows"] {
     left: 60%;
-    top: 8%;
+    top: 20%;
     z-index: -1;
   }
 
@@ -1117,6 +1159,12 @@ ul {
     --categories-card-h3-size: 1.25rem;
     --categories-card-gap: 24px;
   }
+
+  .category-cards h3 {
+    max-width: 50%;
+    line-height: 35px;
+  }
+  /* coustomer rating section */
   .customer-rating-section {
     display: block;
     width: 100%;
@@ -1157,7 +1205,18 @@ ul {
 
   .rating-cards p {
     max-width: 353px;
+    font-weight: 450px;
+    line-height: 30px;
+    font-size: 20px;
   }
+
+
+  /* Blog section */
+  .more-blog-btn {
+    margin-top: 64px;
+  }   
+
+  /* footer section */
   .upper-footer {
     --upper-footer-h3-size: 42px;
     --upper-footer-h4-size: 26px;
@@ -1207,6 +1266,9 @@ ul {
   .hrLine {
     display: none;
   }
+  .contact-btns{
+    margin-top: 30px;
+  }
   .contact-us,
   .contact-number {
     max-width: 210px;
@@ -1216,7 +1278,7 @@ ul {
   }
   .contact-info-section-big {   
     width: 435px;
-    padding-top: 40px;
+    padding-top: 48px;
   }
   .contact-info-section {
     display: none;
@@ -1230,6 +1292,7 @@ ul {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
+    padding-bottom: 10px;
   }
   .contact-info-section-big p {
     font-size: 16px;
@@ -1280,11 +1343,14 @@ ul {
     width: 100%;
     max-width: 1440px;
   }
-  .description-font-size{
-    font-size: 16px;
-    font-weight: 450;
-    line-height: 20.24px;
-}
+  .heading h2{
+    font-size: 56px;
+    line-height: 83px;
+  }
+  .heading p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 
   /* nav section config */
   .nav-section {
@@ -1354,11 +1420,14 @@ ul {
     display: flex;
   }
 
-  .hero-section-heading > h1,
-  .hero-section-heading > p {
+  .hero-section-heading > h1 {
     width: 100%;
     max-width: 527px;
     /* width: 80%; */
+  }
+  .hero-section-heading > p{
+    width: 100%;
+    max-width: 515px;
   }
 
   .glow-effect-1 {
@@ -1390,9 +1459,16 @@ ul {
     right: 81%;
   }
 
+  .step-card h3 {
+    color: var(--step-card-heading-color);
+    /* font-size: 24px; */
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
   .step-3 img[alt="arrows"] {
     left: 89%;
   }
+
 
   /* Category config */
   .categories {
@@ -1400,6 +1476,14 @@ ul {
     --categories-card-height: 271px;
     --categories-card-h3-size: 1.5rem;
     --categories-card-gap: 32px;
+  }
+  .category-heading h2{
+    padding-bottom: 16px;
+  }
+  /* why choose section */
+
+  .why-choose-heading h2{
+    padding-bottom: 16px;
   }
 
   /* Rating section */
@@ -1444,17 +1528,29 @@ ul {
     margin-bottom: 0;
   }
 
-  .glow-effect-2{
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    right: 73%;
-    bottom: 10%;
-    border: 1px solid black;
-    /* Ellipse 39 */
-    background: #62C5FF;
-    opacity: 0.5;
-    filter: blur(177.59px);
-  }
 
+  .hero-section-container {
+    padding: 62px 75px 0 65px;
+  }
+  .working-step {
+    padding: 80px 110px 76px 100px;
+  }
+  .category {
+  padding: 80px 130px;
+  }
+  .why-choose {
+  padding: 80px 120px;
+  }
+  .customer-rating {
+  padding: 80px 117px;
+  }
+  .blog{
+  padding:80px;
+  }
+  .upper-footer {
+  padding: 60px 120px 80px;
+  }
+  .lower-footer-content {
+  padding: 60px 65px 30px;
+  }
 }
