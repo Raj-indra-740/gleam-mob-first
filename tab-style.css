@@ -1,0 +1,84 @@
+:root {
+    --link-font-color: #373a36;
+    --heading-font-color: #373a36;
+    --description-font-color: #0071b4;
+    --heading-font-size: 2rem;
+    --description-font-size: 1rem;
+    --padding-of-sections-tb: 0;
+    --padding-of-sections-lr: 1rem;
+
+    --head-text-line-heigth: 42px;
+    --description-text-line-heigth: 20px;
+
+    --section-heading-font-color: #373a36;
+    --section-heading-padding-lr: 10px;
+    --section-heading-padding-tb: 40px;
+    --section-heading-width: 343px;
+
+    --card-h3-width: 80%;
+}
+
+.logo-size {
+    width: 125px;
+    height: 53px;
+}
+
+/* Hero section */
+.hero-section-container {
+    flex-direction: row;
+}
+.hero-section-heading,
+.hero-section-banner {
+    width: 50%;
+}
+.hero-section-heading {
+    flex-direction: column;
+}
+.hero-section-heading>h1,
+.hero-section-heading>p {
+    width: 90%;
+    text-align: start;
+}
+.hero-section-heading__text {
+    max-width: 527px;
+    font-size: 42px;
+    line-height: 55px;
+}
+.hero-section-description__text {
+    max-width: 515px;
+    font-size: 18 px;
+    line-height: 23px;
+}
+.hero-section-heading__text--plr {
+    padding-left: 0;
+    padding-right: 0;
+}
+.hero-section-description__text--ptb {
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+/* Working step section */
+.row-one,
+.row-two {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.working-step {
+    padding: var(--padding-of-heading-section-t) var(--padding-of-sections-lr) var(--padding-of-heading-section-b);
+}
+
+.load-more-btn {
+    display: none;
+}
+
+.list-3,
+.list-4,
+.list-5 {
+    display: block;
+}
+
+.footer-links {
+    flex-direction: row;
+}
